@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ### Explanation
+1. **`<label>` tag**: Describes the input field for accessibility and usability. The `for` attribute links the label to the input field's `id`.
+2. **`id` attribute**: Unique identifier for the input element, used for linking with the label and JavaScript.
+3. **`placeholder` attribute** (added to inputs): Provides a hint or example of what to enter in the field. 
+4. **`action` attribute in `<form>`**: Specifies the URL where form data is sent.
+5. **`method` attribute in `<form>`**: Specifies the HTTP method (GET or POST) for sending data.
+6. **`name` attribute**: Identifies the input data when submitted, serving as the key for the input's value in the form data. -->
+
+    <form action="/submit" method="post" autocomplete="off">
+      <label for="username">Hello</label>
+
+      <br />
+
+      <input type="text" id="username" placeholder="enter yor name" />
+
+      <br />
+
+      <label for="password" method="post"></label>
+
+      <br />
+
+      <input type="text" id="password" placeholder="enter password" />
+
+      <br />
+      <button type="Submit">login</button>
+
+      <!-- ### **3. 
+       Form Attributes** #### **Common Attributes** 
+       
+       1. **`action`** -
+      Specifies the URL (endpoint) where form data is sent after submission.
+      This is often used to specify a server-side script or API endpoint. -
+      Without an `action` attribute, the form will submit data to the current
+      page's URL. **Example:** ```html
+     
+      ``` Here, form data will be sent to the "/submit-data" URL. -->
+
+      <hr>
+
+      <form action="/submit-data" method="post">
+
+        <input type="text" name="username">
+        <button type = "submit">submit</button>
+      </form>
+
+      <!-- 2. **`method`**
+     - Defines the HTTP method used to send form data to the server.
+     - **GET**: Sends data appended to the URL as query parameters. Best for non-sensitive data like search queries.
+     - **POST**: Sends data in the request body, suitable for sensitive or large amounts of data like passwords or file uploads. -->
+
+     <hr>
+<!-- 
+     3. **`autocomplete`**
+   - Enables or disables the browser's autofill functionality for form fields.
+     - **`on`** (default): Browser suggests previously entered values.
+     - **`off`**: Disables autofill for the form or specific fields. -->
+
+     <form autocomplete="off">
+
+        <input type="text" name="username">
+        <button type = "submit">submit</button>
+      </form>
+
+      Labels and Placeholders**
+
+#### **Label**
+Labels describe inputs and improve accessibility.
+```html
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+<!-- ```
+
+#### **Placeholder**
+Placeholders provide hints inside the input field.
+```html
+<input type="text" placeholder="Enter your name">
+```
+
+#### **Difference Between Placeholder and Label**
+- **Placeholders** disappear when the user starts typing.
+- **Labels** remain visible and are accessible by screen readers.
+
+
+
+ -->
+
+ <form>
+    <label for="country">Country:</label>
+    <select id="country" name="country" multiple>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+      <option value="india">India</option>
+    </select>
+  </form>
+
+
+    </form>
+  </body>
+</html>
+
+
+<!-- 
+1. Create a login form with email and password inputs , COURSE, DURATION: 
+2. Design a survey form with checkboxes and a textarea for feedback : MERN STACK, TECH STACK USAGE.
+3. Create a registration form with validation for email, phone, and password.   
+ -->
